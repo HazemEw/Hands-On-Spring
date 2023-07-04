@@ -1,0 +1,429 @@
+{
+	"info": {
+		"_postman_id": "a56b501f-e98a-4e73-bd18-e6aac56f5898",
+		"name": "order-managment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27583912"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"hazemewidat@gmail.com\",\r\n    \"password\":\"hazem123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8082/api/v1/auth",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"v1",
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addCustomer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \r\n        \"first_name\": \"yaseen\",\r\n        \"last_name\": \"walid\",\r\n        \"bornAt\": \"2017-08-25\",\r\n        \"email\": \"NEWwwemail@gmail.com\",\r\n        \"password\": \"yassen2000\"\r\n    \r\n    }"
+				},
+				"url": {
+					"raw": "localhost:8080/api/customers",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCustomer",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "updateCustomer",
+			"request": {
+				"method": "PUT",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "deleteCustomer",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "secret eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoYXplbUBnbWFpbC5jb20iLCJleHAiOjE2ODgzNTA1NTAsImlhdCI6MTY4ODMxNDU1MH0.bsHjEQ-Acy_ZGbEDp-FqmJ7TSDv0SAG84PUevlxzJpQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8085/api/customers/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"customers",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add product",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "secret eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoYXplbUBnbWFpbC5jb20iLCJleHAiOjE2ODgzNTA1NTAsImlhdCI6MTY4ODMxNDU1MH0.bsHjEQ-Acy_ZGbEDp-FqmJ7TSDv0SAG84PUevlxzJpQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \r\n        \"name\": \"laptob\",\r\n        \"price\": 500.0,\r\n        \"slug\": \"22\",\r\n        \"reference\": \"dd\",\r\n        \"vat\": 2\r\n        \r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8085/api/products",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getProduct",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "updateProduct",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "secret eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ5YXNlbkBnbWFpbC5jb20iLCJleHAiOjE2NTQ1MDc4NzksImlhdCI6MTY1NDQ3MTg3OX0.WhEqrfdVu9-2haYwWd7_modyUAE4-LpERCg9eFmA-KE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{       \r\n\r\n    \"name\": \"laptob\",\r\n    \"price\": 500.0,\r\n    \"slug\": \"222222\",\r\n    \"reference\": \"dd\",\r\n    \"vat\": 2\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8085/api/products/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteProduct",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "secret eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoYXplbUBnbWFpbC5jb20iLCJleHAiOjE2ODgzNTA1NTAsImlhdCI6MTY4ODMxNDU1MH0.bsHjEQ-Acy_ZGbEDp-FqmJ7TSDv0SAG84PUevlxzJpQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8085/api/products/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"products",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add order",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "secret eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoYXplbUBnbWFpbC5jb20iLCJleHAiOjE2ODgzNTA1NTAsImlhdCI6MTY4ODMxNDU1MH0.bsHjEQ-Acy_ZGbEDp-FqmJ7TSDv0SAG84PUevlxzJpQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n    \r\n        \"customer_id\": 1\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8085/api/orders",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all order",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "delete order",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "secret eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoYXplbUBnbWFpbC5jb20iLCJleHAiOjE2ODgzNTA1NTAsImlhdCI6MTY4ODMxNDU1MH0.bsHjEQ-Acy_ZGbEDp-FqmJ7TSDv0SAG84PUevlxzJpQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8085/api/orders/7",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"orders",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update order",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "secret eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoYXplbUBnbWFpbC5jb20iLCJleHAiOjE2ODgzNTA1NTAsImlhdCI6MTY4ODMxNDU1MH0.bsHjEQ-Acy_ZGbEDp-FqmJ7TSDv0SAG84PUevlxzJpQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \r\n    \"customer_id\": 9,\r\n    \"orderAt\": \"2023-06-06T00:12:54.673+00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8085/api/orders/8",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"orders",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add stock",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "secret eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoYXplbUBnbWFpbC5jb20iLCJleHAiOjE2ODgzNTA1NTAsImlhdCI6MTY4ODMxNDU1MH0.bsHjEQ-Acy_ZGbEDp-FqmJ7TSDv0SAG84PUevlxzJpQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"product_id\":1,\r\n    \"quantity\":\"7447\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8085/api/stocks",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"stocks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all stocks",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "update stock",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "secret eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoYXplbUBnbWFpbC5jb20iLCJleHAiOjE2ODgzNTA1NTAsImlhdCI6MTY4ODMxNDU1MH0.bsHjEQ-Acy_ZGbEDp-FqmJ7TSDv0SAG84PUevlxzJpQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n   \r\n    \"product_id\": 1,\r\n    \"quantity\": 7447,\r\n    \"updateAt\": \"2022-06-07T17:13:01.352+00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8085/api/stocks/10",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"stocks",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete stock",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "secret eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoYXplbUBnbWFpbC5jb20iLCJleHAiOjE2ODgzNTA1NTAsImlhdCI6MTY4ODMxNDU1MH0.bsHjEQ-Acy_ZGbEDp-FqmJ7TSDv0SAG84PUevlxzJpQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8085/api/stocks/10",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"stocks",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add product order",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "get all product order",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
