@@ -31,9 +31,7 @@ ___
 |POST|localhost:8085/api/productorder|201 CREATED| add new product order|
 |GET|localhost:8085/api/productorder|200 OK| get all product order|
 ___
-# postman testing JSON File:
-order-managment.postman_collection.json
-# Build docker image
+
 
 
 
